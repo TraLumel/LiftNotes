@@ -1,0 +1,68 @@
+.workspace {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 232px minmax(0, 1fr);
+  background: #fafbf8;
+}
+.sidebar {
+  background: #f0f4ec;
+  border-right: 1px solid #d9dfd5;
+  padding: 38px 16px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 10px 48px;
+  color: #203527;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -.8px;
+  text-decoration: none;
+}
+.book-mark {
+  width: 23px;
+  height: 28px;
+  border: 2px solid #456548;
+  border-left-width: 6px;
+  border-radius: 3px;
+  background: #d0e3c5;
+}
+.sidebar nav { display: grid; gap: 5px; }
+.sidebar nav a { color: #394339; font-size: 15px; padding: 11px 14px; border-radius: 5px; }
+.sidebar nav a.Mui-selected { background: #dcebd3; color: #24472c; font-weight: 650; }
+.content { width: 100%; max-width: 1120px; padding: 38px clamp(24px, 4vw, 72px) 64px; min-width: 0; }
+h1 { margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.2; letter-spacing: -.035em; }
+h2 { margin: 0 0 12px; font-size: 19px; line-height: 1.35; }
+.subline, .muted { color: #536151; }
+.subline { margin: 8px 0 0; }
+section { margin-top: 30px; }
+.panel { background: white; border: 1px solid #d8dfd4; border-radius: 8px; overflow: hidden; }
+.panel table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 12px 18px; font-variant-numeric: tabular-nums; }
+th { font-size: 13px; font-weight: 600; color: #576052; background: #f1f4ee; }
+td { border-top: 1px solid #e2e6de; }
+.numeric { text-align: right; }
+a { color: #345f3e; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid #38633e; outline-offset: 2px; }
+.diary-row { display: grid; grid-template-columns: 116px 1fr auto; align-items: center; gap: 18px; padding: 16px 20px; }
+.diary-row + .diary-row { border-top: 1px solid #e2e6de; }
+.diary-row time { font-size: 14px; font-weight: 600; }
+.diary-row a { font-weight: 650; }
+.diary-row small { display: block; margin-top: 4px; color: #536151; }
+.duration { text-align: right; font-variant-numeric: tabular-nums; }
+.summary { margin: 0; padding: 12px 18px; background: #eff5eb; }
+.note { padding: 20px; }
+.note p { margin: 8px 0 16px; }
+.detail-back { display: inline-block; margin-bottom: 14px; }
+@media (max-width: 700px) {
+  .workspace { display: block; }
+  .sidebar { padding: 14px 16px; border-right: 0; border-bottom: 1px solid #d9dfd5; }
+  .brand { margin: 0 0 10px; font-size: 20px; }
+  .sidebar nav { display: flex; flex-wrap: wrap; gap: 2px; }
+  .sidebar nav a { flex: none; padding: 6px 8px; font-size: 14px; }
+  .content { padding: 24px 16px 40px; }
+  .diary-row { grid-template-columns: 1fr auto; gap: 5px 12px; padding: 12px 14px; }
+  .diary-row time { grid-column: 1 / -1; }
+  th, td { padding: 10px; }
+}
